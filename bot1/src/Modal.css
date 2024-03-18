@@ -1,0 +1,82 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal {
+    background: linear-gradient(to right bottom, hwb(41 25% 25% / 0.836), hwb(55 25% 25% / 0.741));
+    color: hsl(0, 0%, 100%);
+    padding: 4rem;
+    border-radius: 8px;
+    position: relative;
+    width: 60rem;
+    max-width: calc(100% - 40px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .modal__content {
+    text-align: center;
+  }
+  
+  .modal__title {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .modal__description {
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .modal__text {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+  }
+  
+  .modal__btn {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    border: 1px solid hsla(0, 0%, 100%, 0.4);
+    border-radius: 2rem;
+    background: transparent;
+    color: inherit;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .modal__btn:hover {
+    border-color: hsla(0, 0%, 100%, 0.6);
+    transform: translateY(-2px);
+  }
+  
+  .modal__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  
+  /* You might want to add more styles for small screens */
+  @media (max-width: 768px) {
+    .modal {
+      width: auto;
+      padding: 2rem;
+    }
+  
+    .modal__text {
+      padding: 0;
+    }
+  }
+  

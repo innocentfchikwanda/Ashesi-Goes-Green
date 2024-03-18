@@ -1,0 +1,78 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Login Form</title>
+      <link rel="stylesheet" href="../stylesheet/login.css">
+       <!-- Font Awesome Cdn Link -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+       <!-- Boxicons -->
+	    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    
+    <body>
+       <div class="wrapper">
+        <a href="home.html" class="brand">
+          <i class="fas fa-solid fa-tree"></i>
+        </a>
+
+        <h2>Log In</h2>
+        <br>
+          <form id="loginForm" action="/login" method="POST" name="loginForm" novalidate>
+            <div class="form-field">
+                <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter your email" name="email" id="email" required>
+              </div>
+            <div class="form-field">
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" placeholder="Enter your password" name="password" id="password" required title="Password must contain at least 8 characters, including 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character (!@#$%^&*)">
+              </div>
+            <br>
+            
+            <button type="submit" class="login-button" id="loginButton" name="loginButton">Log In</button>
+          <p class="recover">
+            <a href="#">Recover Password</a>
+          </p>
+        </form>
+        <p class="alternative">
+          ----- or continue with -----
+        </p>
+        <div class="icons">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+        <div class="not-member">
+          Not a member? <a href="register.html">Register Now</a>
+          <br><br>
+          <a href="home.html">HOME</a> > LOGIN
+        </div>
+      </div>
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+          var email = document.getElementById('email');
+          var password = document.getElementById('password');
+          var emailError = document.getElementById('emailError');
+          var passwordError = document.getElementById('passwordError');
+          var isValid = true;
+          
+          // Clear previous error messages
+          emailError.textContent = '';
+          passwordError.textContent = '';
+    
+          if (!email.value) {
+            emailError.textContent = 'Please enter your email.';
+            isValid = false;
+          }
+    
+          if (!password.value) {
+            passwordError.textContent = 'Please enter your password.';
+            isValid = false;
+          }
+          
+          if (!isValid) {
+            event.preventDefault(); // Prevent form submission
+          }
+        });
+      </script>
+    </body>
+    </html>
+    </span>

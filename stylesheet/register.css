@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #dfe9f5;
+    background-color: rgb(228, 151, 8);
+}
+
+.register-container {
+    width: 330px;
+    padding: 2rem 0 1rem 0;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+    color: rgb(228, 151, 8);
+}
+
+.sign {
+    background-color: rgb(228, 151, 8);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #07001f;
+}
+
+p {
+    margin-bottom: 1.7rem;
+}
+
+form input,
+form select {
+    width: 85%;
+    outline: none;
+    border: none;
+    background: #dfe9f5;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-field input,
+.form-field select {
+    width: 275px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.form-field input.invalid,
+.form-field select.invalid {
+    border-color: red;
+}
+
+.form-field input.valid,
+.form-field select.valid {
+    border-color: green;
+}
+
+.gender-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.gender-field label {
+    display: inline-block;
+    margin-bottom: 0;
+    flex-basis: 95%;
+    margin-bottom: 5px;
+}
+
+.gender-field input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender-field #male, #female{
+    accent-color:rgb(228, 151, 8) ;
+}
+
+
+.recover {
+    text-align: right;
+    font-size: 0.8rem;
+    margin: 0.2rem 1.7rem 0 0;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #07001f;
+}
+
+button {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 85%;
+    background: rgb(228, 151, 8);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.alternative {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.icons i {
+    color: #07001f;
+    padding: 00.8rem 1.5rem;
+    border-radius: 10px;
+    margin-left: .9rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #dfe9f5;
+}
+
+.icons i:hover {
+    color: #fff !important;
+}
+
+.not-member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    text-align: center;
+  }
+  .not-member a{
+    color: tomato;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
