@@ -10,7 +10,7 @@ const port = 3000;
 
 const openai = new OpenAI({
   organization: 'org-6IXpvf4Xo5eOG4ehfxj6DB31',
-  apiKey: "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",
+  apiKey: "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",
 });
 
 app.use(bodyParser.json());
