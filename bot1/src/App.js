@@ -17,15 +17,15 @@ function App() {
     };
 
     const handleDashboardRedirect = () => {
-        window.location.href = '../view/dashboard.php';
+        window.location.href = '../dashboard.php';
     };
 
     const handleProfileRedirect = () => {
-        window.location.href = '../view/prifile.php';
+        window.location.href = '../dashboard.php';
     };
 
     const handleInformationRedirect = () => {
-        window.location.href = '../view/initiative.php';
+        window.location.href = '../dashboard.php';
     };
 
 
@@ -71,7 +71,7 @@ function App() {
         setConversation(prevConvo => [...prevConvo, userMessage]);
 
         try {
-            const response = await fetch('18.133.105.236:3001', {
+            const response = await fetch('http://18.133.105.236:3000', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message })
@@ -120,7 +120,7 @@ function App() {
                 </a>
                 <ul class="side-menu top">
                     <li onClick={handleDashboardRedirect}>
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        <a href="#">
                             <i className='bx bxs-dashboard'></i>
                             <span className="text">Dashboard</span>
                         </a>
