@@ -8,9 +8,11 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
+const apikey = process.env.API_KEY;
+
 const openai = new OpenAI({
   organization: 'org-6IXpvf4Xo5eOG4ehfxj6DB31',
-  apiKey: "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",
+  apiKey: apikey,
 });
 
 app.use(bodyParser.json());
