@@ -71,7 +71,7 @@ function App() {
         setConversation(prevConvo => [...prevConvo, userMessage]);
 
         try {
-            const response = await fetch('18.133.105.236:3000', {
+            const response = await fetch('18.133.105.236:3001', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message })
